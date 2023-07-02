@@ -1,9 +1,4 @@
-// Setup deno to get your puzzle input...
-import * as path from "https://deno.land/std@0.188.0/path/mod.ts";
-
-const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
-
-const input = await Deno.readTextFile(`${__dirname}/input.txt`);
+const input = await Bun.file(`${import.meta.dir}/input.txt`).text();
 
 // Some really crazy and complex code later...
 
